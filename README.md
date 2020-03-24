@@ -6,7 +6,7 @@
 
 **公众号每日 8 点准时推送文章，且每篇文章都配有专门视频讲解。专注「JAVA，SPRING全家桶」**
 
-![](https://mrhelloworld.com/resources/mrhelloworld/qrcode/OfficialAccounts500-500.gif)
+<img src="https://mrhelloworld.com/resources/mrhelloworld/qrcode/OfficialAccounts500-500.gif">
 
 　　
 
