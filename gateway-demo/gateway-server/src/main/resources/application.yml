@@ -1,0 +1,72 @@
+spring:
+  application:
+    name: gateway-server # 应用名称
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          # 是否与服务发现组件进行结合，通过 serviceId 转发到具体服务实例。
+          enabled: true                  # 是否开启基于服务发现的路由规则
+          lower-case-service-id: true    # 是否将服务名称转小写
+      # 路由规则
+      routes:
+        - id: product-service           # 路由 ID，唯一
+          #uri: http://localhost:7070/   # 目标 URI，路由到微服务的地址
+          uri: lb://product-service     # lb:// 根据服务名称从注册中心获取服务请求地址
+          predicates:                   # 断言（判断条件）
+            # 匹配对应 URL 的请求，将匹配到的请求追加在目标 URI 之后
+            #- Path=/product/**, /api-gateway/**
+            - Path=/**
+            #- Path=/api/product/{segment}
+            #- Method=GET                # 匹配任意 GET 请求
+            #- Query=token               # 匹配请求参数中包含 token 的请求
+            #- Query=token, abc.         # 匹配请求参数中包含 token 并且其参数值满足正则表达式 abc. 的请求
+            # 匹配中国上海时间 2020-02-02 20:20 之后的请求
+            #- After=2020-02-02T20:20:20.000+08:00[Asia/Shanghai]
+            #- RemoteAddr=192.168.10.1/0 # 匹配远程地址请求是 RemoteAddr 的请求，0表示子网掩码
+            # 匹配请求头包含 X-Request-Id 并且其值匹配正则表达式 \d+ 的请求
+            #- Header=X-Request-Id, \d+
+          filters:                       # 网关过滤器
+            # 将 /api-gateway/product/1 重写为 /product/1
+            #- RewritePath=/api-gateway(?<segment>/?.*), $\{segment}
+            # 将 /1 重写为 /product/1
+            #- PrefixPath=/product
+            # 将 /abc/123/product/1 重写为 /product/1
+            #- StripPrefix=2
+            #- SetPath=/product/{segment}
+            # 在下游请求中添加 flag=1
+            #- AddRequestParameter=flag, 1
+            # 任何情况下，响应的 HTTP 状态都将设置为 404
+            #- SetStatus=404 # 404 或者对应的枚举 NOT_FOUND
+            # 限流过滤器
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1 # 令牌桶每秒填充速率
+                redis-rate-limiter.burstCapacity: 2 # 令牌桶总容量
+                key-resolver: "#{@ipKeyResolver}" # 使用 SpEL 表达式按名称引用 bean
+  # redis 缓存
+  redis:
+    timeout: 10000        # 连接超时时间
+    host: 192.168.10.101  # Redis服务器地址
+    port: 6379            # Redis服务器端口
+    password: root        # Redis服务器密码
+    database: 0           # 选择哪个库，默认0库
+    lettuce:
+      pool:
+        max-active: 1024  # 最大连接数，默认 8
+        max-wait: 10000   # 最大连接阻塞等待时间，单位毫秒，默认 -1
+        max-idle: 200     # 最大空闲连接，默认 8
+        min-idle: 5       # 最小空闲连接，默认 0
+
+# 端口
+server:
+  port: 9000
+
+# 配置 Eureka Server 注册中心
+eureka:
+  instance:
+    prefer-ip-address: true       # 是否使用 ip 地址注册
+    instance-id: ${spring.cloud.client.ip-address}:${server.port} # ip:port
+  client:
+    service-url:                  # 设置服务注册中心地址
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
