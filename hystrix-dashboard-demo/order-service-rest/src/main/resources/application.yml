@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: order-service-rest # 应用名称
+  # redis 缓存
+  redis:
+    timeout: 10000        # 连接超时时间
+    host: 192.168.10.101  # Redis服务器地址
+    port: 6379            # Redis服务器端口
+    password: root        # Redis服务器密码
+    database: 0           # 选择哪个库，默认0库
+    lettuce:
+      pool:
+        max-active: 1024  # 最大连接数，默认 8
+        max-wait: 10000   # 最大连接阻塞等待时间，单位毫秒，默认 -1
+        max-idle: 200     # 最大空闲连接，默认 8
+        min-idle: 5       # 最小空闲连接，默认 0
+
+# 端口
+server:
+  port: 9090
+  tomcat:
+    max-threads: 10 # 降低最大线程数方便模拟高并发
+
+# 配置 Eureka Server 注册中心
+eureka:
+  instance:
+    prefer-ip-address: true       # 是否使用 ip 地址注册
+    instance-id: ${spring.cloud.client.ip-address}:${server.port} # ip:port
+  client:
+    service-url:                  # 设置服务注册中心地址
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
+
+# 度量指标监控与健康检查
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
