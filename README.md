@@ -8,7 +8,7 @@ Spring Cloud 系列文章的案例源码。
 
 **公众号每日 8 点准时推送文章，且每篇文章都配有专门视频讲解。专注「JAVA，SPRING全家桶」**
 
-<img src="https://mrhelloworld.com/resources/mrhelloworld/qrcode/OfficialAccounts.gif" alt="哈喽沃德先生" style="width: 500px; height: 500px;" title="">
+<img src="https://mrhelloworld.com/resources/mrhelloworld/qrcode/OfficialAccounts.gif" style="zoom:50%;" />
 
 　　
 
@@ -33,6 +33,6 @@ Spring Cloud 系列文章的案例源码。
 
 　　
 
-本系列仍在持续更新中，敬请关注公众号获取每日最新资讯，感谢。
+本系列仍在持续更新中，请关注公众号获取每日最新资讯，感谢。
 
 　　
