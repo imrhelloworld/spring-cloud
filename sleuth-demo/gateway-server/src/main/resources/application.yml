@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: gateway-server # 应用名称
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          # 是否与服务发现组件进行结合，通过 serviceId 转发到具体服务实例。
+          enabled: true                  # 是否开启基于服务发现的路由规则
+          lower-case-service-id: true    # 是否将服务名称转小写
+#  zipkin:
+#    base-url: http://localhost:9411/ # 服务端地址
+#    sender:
+#      #type: web                      # 数据传输方式，web 表示以 HTTP 报文的形式向服务端发送数据
+#      type: rabbit
+#    rabbitmq:
+#      queue: zipkin               # 队列名称
+#  rabbitmq:
+#    host: 192.168.10.101          # 服务器 IP
+#    port: 5672                    # 服务器端口
+#    username: guest               # 用户名
+#    password: guest               # 密码
+#    listener:
+#      direct:
+#        retry:
+#          enabled: true           # 是否开启发布重试
+#          max-attempts: 5         # 最大重试次数
+#          initial-interval: 5000  # 重试间隔时间（单位毫秒）
+#      simple:
+#        retry:
+#          enabled: true           # 是否开启消费者重试
+#          max-attempts: 5         # 最大重试次数
+#          initial-interval: 5000  # 重试间隔时间（单位毫秒）
+  sleuth:
+    sampler:
+      probability: 1.0            # 收集数据百分比，默认 0.1（10%）
+
+# 端口
+server:
+  port: 9000
+
+# 配置 Eureka Server 注册中心
+eureka:
+  instance:
+    prefer-ip-address: true       # 是否使用 ip 地址注册
+    instance-id: ${spring.cloud.client.ip-address}:${server.port} # ip:port
+  client:
+    service-url:                  # 设置服务注册中心地址
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
