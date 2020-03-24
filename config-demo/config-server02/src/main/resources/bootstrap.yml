@@ -1,0 +1,7 @@
+# 非对称加解密
+encrypt:
+  key-store:
+    location: classpath:config.keystore # keystore 文件存储路径
+    alias: config # 密钥对别名
+    password: config # storepass 密钥仓库
+    secret: config # keypass 用来保护所生成密钥对中的私钥

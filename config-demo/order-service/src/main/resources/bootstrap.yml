@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    config:
+      name: order-service # 配置文件名称，对应 git 仓库中配置文件前半部分
+      label: master # git 分支
+      profile: prod # 指定环境
+      discovery:
+        enabled: true # 开启
+        service-id: config-server # 指定配置中心服务端的 service-id
+      # 安全认证
+      username: user
+      password: 123456
+
+# 度量指标监控与健康检查
+management:
+  endpoints:
+    web:
+      base-path: /actuator    # 访问端点根路径，默认为 /actuator
+      exposure:
+        include: '*'          # 需要开启的端点，这里主要用到的是 refresh 这个端点
+        #exclude:             # 不需要开启的端点

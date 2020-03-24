@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: config-client # 配置文件名称，对应 git 仓库中配置文件前半部分
+      uri: http://localhost:8888 # config-server 服务端地址
+      label: master # git 分支
+      profile: dev # 指定环境
