@@ -1,0 +1,86 @@
+server:
+  port: 9000 # 端口
+
+spring:
+  application:
+    name: zuul-server # 应用名称
+  # redis 缓存
+  redis:
+    timeout: 10000        # 连接超时时间
+    host: 192.168.10.101  # Redis服务器地址
+    port: 6379            # Redis服务器端口
+    password: root        # Redis服务器密码
+    database: 0           # 选择哪个库，默认0库
+    lettuce:
+      pool:
+        max-active: 1024  # 最大连接数，默认 8
+        max-wait: 10000   # 最大连接阻塞等待时间，单位毫秒，默认 -1
+        max-idle: 200     # 最大空闲连接，默认 8
+        min-idle: 5       # 最小空闲连接，默认 0
+
+# 路由规则
+zuul:
+  # 开启 Zuul 网关重试
+  retryable: true
+  # 服务限流
+  ratelimit:
+    # 开启限流保护
+    enabled: true
+    # 限流数据存储方式
+    repository: REDIS
+    # policy-list 自定义配置，局部生效
+    policy-list:
+      # 指定需要被限流的服务名称
+      product-service:
+        - limit: 5
+          refresh-interval: 60  # 60s 内请求超过 5 次，服务端就抛出异常，60s 后可以恢复正常请求
+          type:
+            - origin
+            - url
+            - user
+  # 禁用 Zuul 默认的异常处理 filter
+  SendErrorFilter:
+    error:
+      disable: true
+  #prefix: /api
+  #ignored-services: order-service # 服务名称排除，多个服务逗号分隔，'*' 排除所有
+  routes:
+    product-service:              # 路由 id 自定义
+      path: /product-service/**   # 配置请求 url 的映射路径
+      #url: http://localhost:7070/ # 映射路径对应的微服务地址
+      serviceId: product-service  # 根据 serviceId 自动从注册中心获取服务地址并转发请求
+
+# 配置 Eureka Server 注册中心
+eureka:
+  instance:
+    prefer-ip-address: true       # 是否使用 ip 地址注册
+    instance-id: ${spring.cloud.client.ip-address}:${server.port} # ip:port
+  client:
+    service-url:                  # 设置服务注册中心地址
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
+
+# 度量指标监控与健康检查
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
+# Hystrix 超时时间设置
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000  # 线程池隔离，默认超时时间 1000ms
+
+# Ribbon 超时时间设置：建议设置小于 Hystrix
+ribbon:
+  ConnectTimeout: 5000                    # 请求连接的超时时间: 默认超时时间 1000ms
+  ReadTimeout: 5000                       # 请求处理的超时时间: 默认超时时间 1000ms
+  # 重试次数
+  MaxAutoRetries: 1                       # MaxAutoRetries 表示访问服务集群下原节点（同路径访问）
+  MaxAutoRetriesNextServer: 1             # MaxAutoRetriesNextServer表示访问服务集群下其余节点（换台服务器）
+  # Ribbon 开启重试
+  OkToRetryOnAllOperations: true

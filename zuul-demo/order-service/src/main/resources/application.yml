@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: order-service # 应用名称
+
+# 端口
+server:
+  port: 9090
+
+# 配置 Eureka Server 注册中心
+eureka:
+  instance:
+    prefer-ip-address: true       # 是否使用 ip 地址注册
+    instance-id: ${spring.cloud.client.ip-address}:${server.port} # ip:port
+  client:
+    service-url:                  # 设置服务注册中心地址
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
+
+# Ribbon 超时时间设置：建议设置小于 Hystrix
+ribbon:
+  ConnectTimeout: 5000                    # 请求连接的超时时间: 默认超时时间 1000ms
+  ReadTimeout: 5000                       # 请求处理的超时时间: 默认超时时间 1000ms
+  # 重试次数
+  MaxAutoRetries: 1                       # MaxAutoRetries 表示访问服务集群下原节点（同路径访问）
+  MaxAutoRetriesNextServer: 1             # MaxAutoRetriesNextServer表示访问服务集群下其余节点（换台服务器）
+  # Ribbon 开启重试
+  OkToRetryOnAllOperations: true
