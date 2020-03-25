@@ -1,0 +1,40 @@
+server:
+  port: 8889 # 端口
+
+spring:
+  application:
+    name: config-server # 应用名称
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/imrhelloworld/config-repo # 配置文件所在仓库地址
+          #username:             # Github 等产品的登录账号
+          #password:             # Github 等产品的登录密码
+          #default-label: master # 配置文件分支
+          #search-paths:         # 配置文件所在根目录
+  # 消息队列
+  rabbitmq:
+    host: 192.168.10.101
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+
+# 配置 Eureka Server 注册中心
+eureka:
+  instance:
+    prefer-ip-address: true       # 是否使用 ip 地址注册
+    instance-id: ${spring.cloud.client.ip-address}:${server.port} # ip:port
+  client:
+    service-url:                  # 设置服务注册中心地址
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
+
+# 度量指标监控与健康检查
+management:
+  endpoints:
+    web:
+      base-path: /actuator    # 访问端点根路径，默认为 /actuator
+      exposure:
+        include: bus-refresh  # 需要开启的端点
+        #exclude:             # 不需要开启的端点
