@@ -4,8 +4,8 @@ server:
 spring:
   application:
     name: service-provider # 应用名称
-  # 配置 Consul 注册中心
   cloud:
+    # 配置 Consul 注册中心
     consul:
       # 注册中心的访问地址
       host: localhost
