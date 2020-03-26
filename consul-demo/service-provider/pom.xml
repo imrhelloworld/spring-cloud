@@ -17,7 +17,7 @@
 
     <!-- 项目依赖 -->
     <dependencies>
-        <!-- spring cloud consul 依赖 -->
+        <!-- spring cloud consul discovery 依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
