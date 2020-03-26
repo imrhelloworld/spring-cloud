@@ -10,7 +10,7 @@ spring:
       # 注册中心的访问地址
       host: localhost
       port: 8500
-      # 服务提供者信息
+      # 服务消费者信息
       discovery:
         register: false                                # 是否需要注册
         instance-id: ${spring.application.name}-01    # 注册实例 id（必须唯一）
