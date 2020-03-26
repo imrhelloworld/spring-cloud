@@ -8,7 +8,7 @@ spring:
   cloud:
     consul:
       # 注册中心的访问地址
-      host: 192.168.31.103
+      host: localhost
       port: 8500
       # 服务提供者信息
       discovery:
