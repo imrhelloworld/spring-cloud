@@ -1,0 +1,27 @@
+server:
+  port: 9090 # 端口
+
+spring:
+  application:
+    name: order-service # 应用名称
+
+# apollo 相关配置
+app:
+  id: order-service # 与 Apollo 配置中心中的 AppId 一致
+
+apollo:
+  meta: http://localhost:8080 # Apollo 中的 Eureka 注册中心地址
+  #cluster:  # 指定 Apollo 集群，相同集群实例使用对应集群的配置
+  #cacheDir:  # 配置缓存目录，网络不可用时任然可提供配置服务
+  bootstrap:
+    enable: true # 启用 apollo
+
+env: DEV # 指定环境
+
+# 自定义配置
+name: order-service-dev
+mysql:
+  host: localhost
+  port: 3306
+  username: root
+  password: root
