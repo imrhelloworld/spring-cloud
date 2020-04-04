@@ -23,11 +23,13 @@
 | hystrix-demo           | [Spring Cloud 系列之 Netflix Hystrix 服务容错（一）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057555&idx=1&sn=6a1a9d1c1e7072151b75f23638561fa6&scene=19#wechat_redirect)<br/>[Spring Cloud 系列之 Netflix Hystrix 服务容错（二）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057620&idx=1&sn=1ab29c1e5b99413310f57587ea56905b&scene=19#wechat_redirect)<br/>[Spring Cloud 系列之 Netflix Hystrix 服务容错（三）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057622&idx=1&sn=d02f038f0d6065b196768fe1b2a8d784&scene=19#wechat_redirect) |
 | hystrix-dashboard-demo | [Spring Cloud 系列之 Netflix Hystrix 服务监控](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057624&idx=1&sn=4946b412f8d0c77c19b325cd361b693f&scene=19#wechat_redirect) |
 | sentinel-demo          | [Spring Cloud 系列之 Alibaba Sentinel 服务哨兵](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057627&idx=1&sn=2c4b1d9d98b6ea847face29de41d3872&scene=19#wechat_redirect) |
-| zuul-demo              | [Spring Cloud 系列之 Netflix Zuul 服务网关（一）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057658&idx=1&sn=d6f5b2353bacb9deee0a3a4f53c4dd80&scene=19#wechat_redirect)<br/>[Spring Cloud 系列之 Netflix Zuul 服务网关（二）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057675&idx=1&sn=5cb0d651f8a40e8a4c32470d248fa04b&scene=19#wechat_redirect)<br/>Spring Cloud 系列之 Netflix Zuul 服务网关（三）<br/>Spring Cloud 系列之 Netflix Zuul 服务网关（四） |
+| zuul-demo              | [Spring Cloud 系列之 Netflix Zuul 服务网关（一）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057658&idx=1&sn=d6f5b2353bacb9deee0a3a4f53c4dd80&scene=19#wechat_redirect)<br/>[Spring Cloud 系列之 Netflix Zuul 服务网关（二）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057675&idx=1&sn=5cb0d651f8a40e8a4c32470d248fa04b&scene=19#wechat_redirect)<br/>[Spring Cloud 系列之 Netflix Zuul 服务网关（三）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057719&idx=1&sn=69fd486d146dd1efb3a747669315706b&scene=19#wechat_redirect)<br/>[Spring Cloud 系列之 Netflix Zuul 服务网关（四）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057720&idx=1&sn=32abdc5d5d3952e77c362398d9a0e735&scene=19#wechat_redirect) |
 | gateway-demo           | Spring Cloud 系列之 Gateway 服务网关                         |
 | sleuth-demo            | Spring Cloud 系列之 Sleuth 链路追踪                          |
 | stream-demo            | Spring Cloud 系列之 Stream 消息驱动                          |
 | config-demo            | Spring Cloud 系列之 Config 配置中心                          |
+| consul-config-demo     | Spring Cloud 系列之 Consul 配置中心                          |
+| apollo-demo            | Spring Cloud 系列之 Apollo 配置中心                          |
 
 　　
 
