@@ -25,9 +25,10 @@
 | sentinel-demo          | [Spring Cloud 系列之 Alibaba Sentinel 服务哨兵](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057627&idx=1&sn=2c4b1d9d98b6ea847face29de41d3872&scene=19#wechat_redirect) |
 | zuul-demo              | [Spring Cloud 系列之 Netflix Zuul 服务网关（一）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057658&idx=1&sn=d6f5b2353bacb9deee0a3a4f53c4dd80&scene=19#wechat_redirect)<br/>[Spring Cloud 系列之 Netflix Zuul 服务网关（二）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057675&idx=1&sn=5cb0d651f8a40e8a4c32470d248fa04b&scene=19#wechat_redirect)<br/>[Spring Cloud 系列之 Netflix Zuul 服务网关（三）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057719&idx=1&sn=69fd486d146dd1efb3a747669315706b&scene=19#wechat_redirect)<br/>[Spring Cloud 系列之 Netflix Zuul 服务网关（四）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057720&idx=1&sn=32abdc5d5d3952e77c362398d9a0e735&scene=19#wechat_redirect) |
 | gateway-demo           | [Spring Cloud 系列之 Gateway 服务网关（一）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057813&idx=1&sn=14a1fb3fa73bd75e336ce11d94829f64&scene=19#wechat_redirect)<br/>[Spring Cloud 系列之 Gateway 服务网关（二）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057814&idx=1&sn=def6319b6ae1bfda5dddf1efe5afeed9&scene=19#wechat_redirect)<br/>[Spring Cloud 系列之 Gateway 服务网关（三）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057816&idx=1&sn=98d89efef671ef8637948968e3ad3e32&scene=19#wechat_redirect)<br/>[Spring Cloud 系列之 Gateway 服务网关（四）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057819&idx=1&sn=69f7718f2f719d97c4634622c6d8925a&scene=19#wechat_redirect) |
-| sleuth-demo            | Spring Cloud 系列之 Sleuth 链路追踪                          |
-| stream-demo            | Spring Cloud 系列之 Stream 消息驱动                          |
-| config-demo            | Spring Cloud 系列之 Config 配置中心                          |
+| sleuth-demo            | [Spring Cloud 系列之 Sleuth 链路追踪（一）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057900&idx=1&sn=f65a8d8e88f21c0857369a6a514f623e&scene=19#wechat_redirect)<br/>[Spring Cloud 系列之 Sleuth 链路追踪（二）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057902&idx=1&sn=7279a8f8417c0cd1da89e13254069212&scene=19#wechat_redirect)<br/>[Spring Cloud 系列之 Sleuth 链路追踪（三）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057904&idx=1&sn=d561a6e21ce74b56a188c366bf300e1f&scene=19#wechat_redirect) |
+| stream-demo            | [Spring Cloud 系列之 Stream 消息驱动（一）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057909&idx=1&sn=f10faccd11b61ddb5bc6c2d1b5b25ed4&scene=19#wechat_redirect)<br/>[Spring Cloud 系列之 Stream 消息驱动（二）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459057911&idx=1&sn=fcdec5908ea36691f651b7d61c8a0012&scene=19#wechat_redirect) |
+| config-demo            | Spring Cloud 系列之 Config 配置中心（一）<br/>Spring Cloud 系列之 Config 配置中心（二）<br/>Spring Cloud 系列之 Config 配置中心（三） |
+| bus-demo               | Spring Cloud 系列之 Bus 消息总线                             |
 | consul-config-demo     | Spring Cloud 系列之 Consul 配置中心                          |
 | apollo-demo            | Spring Cloud 系列之 Apollo 配置中心                          |
 
@@ -36,3 +37,4 @@
 本系列仍在持续更新中，请关注公众号获取每日最新资讯，感谢。
 
 　　
+
