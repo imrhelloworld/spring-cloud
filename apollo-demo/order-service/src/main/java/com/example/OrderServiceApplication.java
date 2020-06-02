@@ -4,7 +4,8 @@ import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@EnableApolloConfig
+// 指定多个 Namespace
+@EnableApolloConfig({"application", "application-mysql", "microservice.application-common"})
 @SpringBootApplication
 public class OrderServiceApplication {
 
