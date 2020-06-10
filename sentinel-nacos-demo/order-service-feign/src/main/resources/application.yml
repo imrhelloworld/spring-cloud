@@ -1,0 +1,22 @@
+server:
+  port: 9091 # 端口
+
+spring:
+  application:
+    name: order-service-feign # 应用名称
+  cloud:
+    # 配置 Nacos 注册中心
+    nacos:
+      discovery:
+        enabled: true # 如果不想使用 Nacos 进行服务注册和发现，设置为 false 即可
+        server-addr: 127.0.0.1:8848 # Nacos 服务器地址
+    # 配置 Sentinel
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8080
+
+# feign 开启 sentinel 支持
+feign:
+  sentinel:
+    enabled: true
