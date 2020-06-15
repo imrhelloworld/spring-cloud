@@ -1,0 +1,24 @@
+server:
+  port: 9090 # 端口
+
+spring:
+  application:
+    name: order-service # 应用名称
+  # 配置 Nacos 注册中心
+  cloud:
+    nacos:
+      discovery:
+        enabled: true # 如果不想使用 Nacos 进行服务注册和发现，设置为 false 即可
+        server-addr: 127.0.0.1:8848 # Nacos 服务器地址，单机版
+
+# Dubbo
+dubbo:
+  # 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样
+  application:
+    name: order-service
+  # 发现 nacos 注册中心暴露的服务
+  registry:
+    protocol: nacos
+    address: spring-cloud://localhost
+  cloud:
+    subscribed-services: product-service # 订阅服务，远程调用的服务名称
