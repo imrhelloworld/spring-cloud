@@ -1,0 +1,29 @@
+server:
+  port: 7070 # 端口
+
+spring:
+  application:
+    name: product-service # 应用名称
+  cloud:
+    nacos:
+      config:
+        enabled: true # 如果不想使用 Nacos 进行配置管理，设置为 false 即可
+        server-addr: 127.0.0.1:8848 # Nacos Server 地址
+        #server-addr: 192.168.10.101:8848,192.168.10.102:8848,192.168.10.103:8848 # Nacos 服务器地址，集群版直连 ip 模式
+        #server-addr: 192.168.10.100:80 # Nacos 服务器地址，集群版 Nginx 转发
+        group: DEFAULT_GROUP # 组，默认为 DEFAULT_GROUP
+        file-extension: yaml # 配置内容的数据格式，默认为 properties
+        #namespace: 450a3f07-08ee-49f6-8213-9b04b06cd3cc # 对应 dev 环境
+        # 扩展配置集
+        ext-config[0]:
+          data-id: ext-config-common01.yaml # 配置集 id
+        ext-config[1]:
+          data-id: ext-config-common02.yaml # 配置集 id
+          group: GLOBAL_GROUP # 组，默认为 DEFAULT_GROUP
+        ext-config[2]:
+          data-id: ext-config-common03.yaml # 配置集 id
+          group: REFRESH_GROUP # 组，默认为 DEFAULT_GROUP
+          refresh: true # 是否支持动态刷新
+        # 共享配置集
+        #shared-dataids: ext-config-common01.yaml,ext-config-common02.yaml,ext-config-common03.yaml # 多个配置集逗号隔开
+        #refreshable-dataids: ext-config-common01.yaml # 哪个配置集支持动态刷新
