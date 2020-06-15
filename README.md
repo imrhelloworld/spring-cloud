@@ -31,7 +31,10 @@
 | bus-demo               | [Spring Cloud 系列之 Bus 消息总线](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459058070&idx=1&sn=96856d7b2559b31a87b13a61675aa840&scene=19#wechat_redirect) |
 | consul-config-demo     | [Spring Cloud 系列之 Consul 配置中心](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459058167&idx=1&sn=29818b90789a948a23624cad6be95d3c&scene=19#wechat_redirect) |
 | apollo-demo            | [Spring Cloud 系列之 Apollo 配置中心（一）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459058529&idx=1&sn=e1dbbbf2ebea47b896c296efcd66e139&scene=19#wechat_redirect)<br/>[Spring Cloud 系列之 Apollo 配置中心（二）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459058531&idx=1&sn=5fedc32fa68d851b4b4d7620196a7656&scene=19#wechat_redirect)<br/>[Spring Cloud 系列之 Apollo 配置中心（三）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459058533&idx=1&sn=f62e49a6d41fcf4538626a6883ba9c5a&scene=19#wechat_redirect)<br/>[Spring Cloud 系列之 Apollo 配置中心（四）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459058536&idx=1&sn=2614ba0599d3ac02fa2868ccdb8ebd87&scene=19#wechat_redirect) |
-| nacos-demo             | [Spring Cloud 系列之 Alibaba Nacos 注册中心（一）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459059317&idx=1&sn=7fe895fbb6d3441cba0d23a4251d5254&scene=19#wechat_redirect)<br/>Spring Cloud 系列之 Alibaba Nacos 注册中心（二） |
+| nacos-demo             | [Spring Cloud 系列之 Alibaba Nacos 注册中心（一）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459059317&idx=1&sn=7fe895fbb6d3441cba0d23a4251d5254&scene=19#wechat_redirect)<br/>[Spring Cloud 系列之 Alibaba Nacos 注册中心（二）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459059319&idx=1&sn=23346e899b83c35fdac9d157316c1499&scene=19#wechat_redirect) |
+| sentinel-nacos-demo    | [双剑合璧 Nacos 结合 Sentinel 实现流量安全控制](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459059323&idx=1&sn=86fcb2e4e0b282a85f1657803d103d4a&scene=19#wechat_redirect) |
+| nacos-config-demo      | [Spring Cloud 系列之 Alibaba Nacos 配置中心](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459059768&idx=1&sn=8a94aa4e1ab50a1e280e954ae719562b&scene=19#wechat_redirect) |
+| dubbo-demo             | Spring Cloud 系列之 Dubbo RPC 通信                           |
 
 　　
 
