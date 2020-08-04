@@ -34,7 +34,7 @@
 | nacos-demo             | [Spring Cloud 系列之 Alibaba Nacos 注册中心（一）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459059317&idx=1&sn=7fe895fbb6d3441cba0d23a4251d5254&scene=19#wechat_redirect)<br/>[Spring Cloud 系列之 Alibaba Nacos 注册中心（二）](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459059319&idx=1&sn=23346e899b83c35fdac9d157316c1499&scene=19#wechat_redirect) |
 | sentinel-nacos-demo    | [双剑合璧 Nacos 结合 Sentinel 实现流量安全控制](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459059323&idx=1&sn=86fcb2e4e0b282a85f1657803d103d4a&scene=19#wechat_redirect) |
 | nacos-config-demo      | [Spring Cloud 系列之 Alibaba Nacos 配置中心](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459059768&idx=1&sn=8a94aa4e1ab50a1e280e954ae719562b&scene=19#wechat_redirect) |
-| dubbo-demo             | Spring Cloud 系列之 Dubbo RPC 通信                           |
+| dubbo-demo             | [Spring Cloud 系列之 Dubbo RPC 通信](https://mp.weixin.qq.com/s?__biz=MzA4MDEwNTI1NA==&mid=2459059770&idx=1&sn=85b610b61b47b7e7fe3914b8e3253686&scene=19#wechat_redirect)                           |
 
 　　
 
